@@ -15,8 +15,8 @@ nav {
     width: 100%;
     height: 76px;
     background-color: white;
-    box-shadow: 0 2px 4px 0 gray;
-    opacity: 0.7; filter: alpha(opacity=70);
+    box-shadow: 0 0px 0px 0 gray;
+    opacity: 1; filter: alpha(opacity=90);
 }
 
 .img-container{
@@ -155,7 +155,6 @@ li {
 }
 
 .heading {
-
     padding: 15px;
     height: 25px;
     color: #000;
@@ -164,6 +163,8 @@ li {
   }
   
   #categoryGrid {
+    background-image: url(../images/caseStudyBackground.png);
+    background-image: 50%;
     margin: 0px 10%;
     display: grid;
     grid-template-rows: 300px 300px;
@@ -178,18 +179,26 @@ img {
     height: 100%;
     object-fit: contain;
     image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
+
 }
 
   #GalleryWalk {
     grid-area: GalleryWalk;
     background-color:  #efbcd2;
-    
-  }
+}
+
+#GalleryWalk:hover {
+    background-color: white;
+    transition: 0.5s;
+}
 
   #AlaskaDeptRev {
     grid-area: AlaskaDeptRev;
+  }
+
+  #AlaskaDeptRev:hover {
+    background-color: white;
+    transition: 0.5s;
   }
 
   #Mia {
@@ -197,6 +206,10 @@ img {
  
   }
   
+  #Mia:hover {
+    background-color: white;
+    transition: 0.5s;
+  }
 
 .btn {
     display: inline-block;
