@@ -8,13 +8,15 @@ body {
 header {
     width: 100%;
     height: 76px; 
+    animation-duration: 3s;
+    animation: rippleEffect 3s timing-function 1s 1;
 }
 
 nav {
     position: fixed;
     width: 100%;
     height: 76px;
-    background-color: white;
+    background-color: #fffcef;
     box-shadow: 0 0px 0px 0 gray;
     opacity: 1; filter: alpha(opacity=90);
 }
@@ -103,6 +105,10 @@ h4 {
     color: black;
 }
 
+h5 {
+    font-size: 1em;
+}
+
 a {
     margin-top: 20px;
     font-size: 1.3em;
@@ -135,9 +141,31 @@ li {
 
 }
 
+.img-container{
+    background-image: url(../images/hero-image.jpg);
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; 
+    align-items: flex-start;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.inner-container {
+    text-align: left;
+    color: white;
+    height: auto;
+    padding-left: 40%;
+    padding-right: 15%;
+    padding-top: 120px;
+}
+
+
 .subHeading {
     text-align: center;
-    border-bottom: 2px solid #2767aa;
+    border-bottom: 0px solid #2767aa;
     width: 200px;
     margin: 30px auto;
   }  
@@ -152,6 +180,7 @@ li {
     align-content: end;
     padding-bottom: 5%;
     max-width: 600px;
+    font-weight: normal;
 }
 
 .heading {
@@ -167,24 +196,30 @@ li {
     background-image: 50%;
     margin: 0px 10%;
     display: grid;
+    background-size: cover;
     grid-template-rows: 300px 300px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "GalleryWalk AlaskaDeptRev"
-        "GalleryWalk Mia"
+        "GalleryWalk Mia";
+    text-align: center;
+    font-weight: normal;
   }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    image-rendering: auto;
-
+.caseStudy img {
+    height: 70%;
+    margin-top: 5%;
 }
 
-  #GalleryWalk {
+#GalleryWalk img {
+    height: 70%;
+    margin-top: 15%;
+}
+
+#GalleryWalk {
     grid-area: GalleryWalk;
     background-color:  #efbcd2;
+    font-weight: normal;
 }
 
 #GalleryWalk:hover {
@@ -229,29 +264,76 @@ img {
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
-@media only screen and (max-width: 1210pxs){
+@media(max-width: 1210pxs){
     .inner-container {
         margin-top: 75px;
         padding-left: 430px;
+        height: 50vh;
     }
 }
 
-@media only screen and (max-width: 920pxs){
+@media(max-width: 1200px){
+    header {
+        font-size: .9em;
+    }
+    
     .inner-container {
-        margin-top: 75px;
-        padding-left: 430px;
+        margin-top: 0px;
+        padding-left: auto;
+        height: 40vh;
+        width: auto;
+    }
+    .nav {
+        font-size: 1em;
+    }
+    .img-container {
+        margin-top: auto;
+        padding-left: 0px;
+        height: 600px;
+        width: auto;
+    }
+    .ripple * {
+        font-size: 3em;
+    }
+
+    .ripple:hover * {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+        font-weight: normal;
     }
 }
   
-  @media only screen and (max-width: 540px){
-    .inner-container {
-        margin-top: 75px;
-        padding-left: 430px;
+@media(max-width: 540px){
+    header {
+        font-size: .75em;
     }
-    h1{
-        font-size: 5em;
+    .img-container {
+        margin-top: auto;
+        padding-left: 0px;
+        height: 600px;
+        width: auto;
     }
-    h2{
-        font-size: 4em;
+    .ripple * {
+        font-size: 2.5em;
+    }
+
+    .ripple:hover * {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: normal;
     }
 }
