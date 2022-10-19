@@ -8,6 +8,46 @@
         <link href="link rel="preconnect href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         
+        <style>
+            .ripple * {
+                font-size: 4.5em;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold; 
+                color: white;
+                margin: 0;
+                display: inline-block;
+                text-shadow: 0 0 0 #fff;
+                color: transparent;
+
+    
+                animation: rippleEffect 2.5s;
+                }
+   
+            @keyframes rippleEffect {
+                40% {
+                opacity: 0.35;
+                }
+                50% {
+                transform: translate3d(0.5em, 0, 0) scale(1.1);
+                text-shadow: 0 0 10px #fff;
+                }
+                75% {
+                transform: translate3d(0, 0, 0) scale(1);
+                text-shadow: 0 0 0 #fff;
+                opacity: 1;
+                }
+                50% {
+                    transform: translate3d(0.5em, 0, 0) scale(1.1);
+                    text-shadow: 0 0 10px #fff;
+                }
+            
+            } 
+         </style>
+         <script>
+            window.addEventListener('load', (event) =>{
+                document.querySelectorAll('.ripple')
+            })
+         </script>
     </head>
     <header>
                 <nav>
@@ -30,6 +70,12 @@
                     and easy-to-use as possible.</h2>
             </div>
         </div>
+
+        <div class="content-wrapper">
+            <div class="content">
+            </div>
+        </div>
+
         <div class="subHeading">
             <h3>Case Studies</h3>
         </div>
@@ -50,6 +96,8 @@
             
             <h3 class="heading">The Mia Foundation</h3>
         </div>
+        
+
         
     </body>
 </html>
